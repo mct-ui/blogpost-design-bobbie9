@@ -4,11 +4,13 @@
     Default markup for page level elements
 */
 
+-webkit-font-smoothing: antialiased;
+
 html {
     font-size: 16px;
     line-height: 1.5;
     font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
-    color: #111;
+    color: #5c6366;
     padding: 48px 24px 24px;
 }
 
@@ -25,7 +27,7 @@ body {
  */
 
 ::selection {
-    background: #e85e00;
+    background: #00e6a1;
     color: white;
     text-shadow: none;
 }
@@ -46,6 +48,10 @@ img {
     ---
     Default markup for typographic elements
 */
+h1, h2, h3{
+    color: #17181A
+}
+
 
 h1 {
     font-family: "Times New Roman", serif;
@@ -59,6 +65,10 @@ h2 {
     font-size: 23px;
     line-height: 32px;
     margin: 0 0 24px;
+}
+
+*+h2 {
+    margin-top: 45px;
 }
 
 h3 {
@@ -123,18 +133,18 @@ hr {
 }
 
 a {
-    color: RoyalBlue;
+    color: #00a1e6;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: BlueViolet;
+    color: #00e6a1;
 }
 
 a:hover,
 a:focus {
-    color: Crimson;
+    color: #1abaff;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -226,4 +236,42 @@ a:focus {
     h3 {
         page-break-after: avoid;
     }
+}
+
+/* 
+    components author
+*/
+
+.c-author {
+    display: flex;
+    align-items: center;
+}
+
+.c-author_image{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+}
+
+.c-author_name,
+.c-author_meta {
+    margin-bottom: 0;
+}
+
+.c-author_meta{
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 4px;
+}
+
+.c-author_name{
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.c-author_image{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    margin-right: 16px;
 }
